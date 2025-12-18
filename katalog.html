@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pretty Nails — Beranda</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================= */
+/*             ROOT              */
+/* ============================= */
+:root{
+  --accent: #7c3aed;
+  --muted:#666;
+  --card-bg:#ffffff;
+  --bg:#fffafc;
+  --radius:14px;
+}
+
+/* ============================= */
+/*         GLOBAL STYLE          */
+/* ============================= */
+*{ box-sizing:border-box }
+
+body{
+  font-family:'Poppins',sans-serif;
+  margin:0;
+  background:var(--bg);
+  color:#222;
+}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 1rem;
+}
+
+/* ============================= */
+/*            HEADER             */
+/* ============================= */
+.header{
+  background:white;
+  box-shadow:0 2px 6px rgba(0,0,0,0.06);
+  position:sticky;
+  top:0;
+  z-index:90;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:1rem 0;
+}
+
+.logo{
+  color:var(--accent);
+  font-weight:700;
+  font-size:1.3rem;
+}
+
+.navlinks a{
+  margin-left:1rem;
+  text-decoration:none;
+  color:#444;
+  font-weight:500;
+}
+
+/* ============================= */
+/*             HERO              */
+/* ============================= */
+.hero{
+  padding:4.5rem 0;
+  text-align:center;
+  color:var(--accent);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  position:relative;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,0.45);
+  backdrop-filter:blur(2px);
+}
+
+.hero h1{
+  font-size:2.3rem;
+  margin:0 0 .5rem;
+  position:relative;
+  z-index:2;
+}
+
+.hero p{
+  position:relative;
+  z-index:2;
+}
+
+/* ============================= */
+/*        SECTION TITLE          */
+/* ============================= */
+.judul-section{
+  margin:0 0 .35rem;
+  color:var(--accent);
+  font-size:1.7rem;
+  font-weight:600;
+  text-align:center;
+}
+
+.subjudul-section{
+  margin:0 0 1.2rem;
+  color:var(--muted);
+  text-align:center;
+  line-height:1.5;
+}
+
+/* ============================= */
+/*         PRODUCT GRID          */
+/* ============================= */
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  margin-top:35px;
+}
+
+.card{
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  padding:14px;
+  text-align:center;
+  box-shadow:0 6px 20px rgba(107,45,211,0.06);
+  transition:transform .2s,box-shadow .2s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+
+.card img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:12px;
+}
+
+.card h3{
+  color:#4a2476;
+  margin:.4rem 0;
+}
+
+.card p{
+  color:var(--muted);
+  margin:.25rem 0 .5rem;
+}
+
+/* ============================= */
+/*        TENTANG KAMI SECTION   */
+/* ============================= */
+.tentang-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f9f7ff 0%, #fff0f8 100%);
+}
+
+.tentang-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.tentang-image {
+  position: relative;
+}
+
+.tentang-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15);
+}
+
+.tentang-content h2 {
+  color: var(--accent);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.tentang-tagline {
+  font-size: 1.3rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.tentang-description {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.tentang-features {
+  margin: 2rem 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.feature-icon {
+  color: var(--accent);
+  font-weight: bold;
+  margin-right: 10px;
+  min-width: 20px;
+}
+
+.feature-text {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ============================= */
+/*        KONTAK SECTION         */
+/* ============================= */
+.kontak-section {
+  background: white;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.kontak-section h3 {
+  color: var(--accent);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.kontak-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.kontak-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+.kontak-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+}
+
+.kontak-btn.whatsapp {
+  background: #25D366;
+}
+
+.kontak-btn.instagram {
+  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+.kontak-btn.tiktok {
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+}
+
+.kontak-btn.tiktok::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.kontak-btn.tiktok:hover::before {
+  left: 100%;
+}
+
+.kontak-btn i {
+  font-size: 1.2rem;
+}
+
+/* ============================= */
+/*            BUTTON             */
+/* ============================= */
+.btn{
+  display:inline-block;
+  background:var(--accent);
+  color:white;
+  padding:12px 24px;
+  border-radius:50px;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+}
+
+.btn-cancel{
+  background:#eee;
+  border:none;
+  padding:8px 14px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* ============================= */
+/*            POPUP              */
+/* ============================= */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.popup-content h3 {
+  margin-top: 0;
+  color: var(--accent);
+  text-align: center;
+}
+
+.popup-content label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 500;
+}
+
+.popup-content select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.popup-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.popup-buttons button {
+  flex: 1;
+  padding: 10px;
+}
+
+/* Class untuk menyembunyikan elemen */
+.hidden {
+  display: none !important;
+}
+
+/* ============================= */
+/*            FOOTER             */
+/* ============================= */
+.footer{
+  background:#fafafa;
+  padding:2rem 0;
+  text-align:center;
+  color:#666;
+}
+
+/* ============================= */
+/*          RESPONSIVE           */
+/* ============================= */
+@media(max-width: 900px){
+  .tentang-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .tentang-content h2 {
+    font-size: 2rem;
+  }
+  
+  .kontak-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .kontak-btn {
+    width: 250px;
+    justify-content: center;
+  }
+  
+  .product-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:520px){
+  .product-grid{
+    grid-template-columns:1fr;
+  }
+
+  .navlinks{
+    display:none;
+  }
+
+  .hero h1{
+    font-size:1.7rem;
+  }
+
+  .card img{
+    height:160px;
+  }
+  
+  .popup-buttons {
+    flex-direction: column;
+  }
+  
+  .tentang-content h2 {
+    font-size: 1.7rem;
+  }
+  
+  .tentang-tagline {
+    font-size: 1.1rem;
+  }
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <div class="logo">Pretty Nails</div>
+    <div class="navlinks">
+      <a href="index.html">Beranda</a>
+      <a href="katalog.html">Katalog</a>
+      <a href="cara-pakai.html">Cara Pakai</a>
+      <a href="tentang.html">Tentang Kami</a>
+      <a href="kontak.html">Kontak</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" style="background-image:url('assets/header.jpg')">
+  <div class="container">
+    <h1>Press On Nails Art Collection</h1>
+    <p>Cantik, praktis, dan estetik — press on nails handmade yang mudah dipasang & bisa dipakai ulang.</p>
+  </div>
+</section>
+
+<!-- =========================
+     SECTION 1 - Best Seller
+========================= -->
+<section class="section-katalog" id="s1">
+  <div class="container">
+    <br>
+    <h2 class="judul-section">Best Seller Collection</h2>
+    <hr style="max-width:300px; margin:12px auto; border:0; border-top:1px solid #ddd;">
+    <p class="subjudul-section">
+      Cocok untuk kamu yang suka desain timeless dan jadi favorit pelanggan.
+      Koleksi ini berisi model-model klasik yang mudah dipadukan untuk segala suasana.
+    </p>
+
+    <div class="product-grid">
+
+      <div class="card">
+        <img src="assets/nails4.jpg" alt="French Tip Classic">
+        <h3>French Tip Classic</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Putih, Nude, Pink</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 35.000,-</p>
+        <button class="btn" onclick="bukaPopup('French Tip Classic', ['Putih','Nude','Pink'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/nails11.jpeg" alt="Ombre Gradient">
+        <h3>Ombre Gradient</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Nude-Pink, Biru-Putih, Ungu-Hitam</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 40.000,-</p>
+        <button class="btn" onclick="bukaPopup('Ombre Gradient', ['Nude-Pink','Biru-Putih','Ungu-Hitam'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/nails12.jpeg" alt="Glitter Full">
+        <h3>Glitter Full</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Gold, Silver, Rose Gold</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 42.000,-</p>
+        <button class="btn" onclick="bukaPopup('Glitter Full', ['Gold','Silver','Rose Gold'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/nails14.jpeg" alt="Glossy Finish">
+        <h3>Glossy Finish</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Merah, Nude, Pink</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 36.000,-</p>
+        <button class="btn" onclick="bukaPopup('Glossy Finish', ['Merah','Nude','Pink'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/nails13.jpeg" alt="Marble Effect">
+        <h3>Marble Effect</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Putih-Hitam, Pink-Abu, Biru-Putih</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 45.000,-</p>
+        <button class="btn" onclick="bukaPopup('Marble Effect', ['Putih-Hitam','Pink-Abu','Biru-Putih'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/nails15.jpeg" alt="Nude Elegan">
+        <h3>Nude Elegan</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Beige, Nude Pink, Coklat Muda</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 35.000,-</p>
+        <button class="btn" onclick="bukaPopup('Nude Elegan', ['Beige','Nude Pink','Coklat Muda'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     SECTION 2 - Cute & Daily
+========================= -->
+<section class="section-katalog" id="s2">
+  <div class="container">
+    <br>
+    <h2 class="judul-section">Cute & Daily Collection</h2>
+    <hr style="max-width:300px; margin:12px auto; border:0; border-top:1px solid #ddd;">
+    <p class="subjudul-section">
+      Pas banget buat tampilan sehari-hari yang manis dan segar.
+    </p>
+
+    <div class="product-grid">
+
+      <div class="card">
+        <img src="assets/naisl16.jpeg" alt="French Tip Modern">
+        <h3>French Tip Modern</h3>
+        <p>Pilihan Warna:</p>
+          <p> Pastel (Biru, Hijau, Ungu)</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 38.000,-</p>
+        <button class="btn" onclick="bukaPopup('French Tip Modern', ['Biru','Hijau','Ungu'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/naisl17.jpeg" alt="Abstract Art">
+        <h3>Abstract Art</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Warna-Warni, Monokrom, Pastel</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 41.000,-</p>
+        <button class="btn" onclick="bukaPopup('Abstract Art', ['Warna-Warni','Monokrom','Pastel'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/nails18.jpeg" alt="Minimalist Nail">
+        <h3>Minimalist Nail</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Nude+Titik Hitam, Putih+Garis Putih</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 34.000,-</p>
+        <button class="btn" onclick="bukaPopup('Minimalist Nail', ['Nude+Titik Hitam','Putih+Garis Putih'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/nails19.jpeg" alt="Gradient Glitter">
+        <h3>Gradient Glitter</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Nude-Gold, Pink-Pearl</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 41.000,-</p>
+        <button class="btn" onclick="bukaPopup('Gradient Glitter', ['Nude-Gold','Pink-Pearl'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/nails20.jpeg" alt="Polkadot Pastel">
+        <h3>Polkadot Pastel</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Pink, Biru, Kuning</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 40.000,-</p>
+        <button class="btn" onclick="bukaPopup('Polkadot Pastel', ['Pink','Biru','Kuning'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/nails21.jpeg" alt="Pastel Block">
+        <h3>Pastel Block</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Pink, Biru, Hijau, Ungu</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 38.000,-</p>
+        <button class="btn" onclick="bukaPopup('Pastel Block', ['Pink','Biru','Hijau','Ungu'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     SECTION 3 - Luxury 
+========================= -->
+<section class="section-katalog" id="s3">
+  <div class="container">
+    <br>
+    <h2 class="judul-section">Luxury Collection</h2>
+    <hr style="max-width:300px; margin:12px auto; border:0; border-top:1px solid #ddd;">
+    <p class="subjudul-section">
+      Didesain untuk tampilan mewah & elegan. Cocok untuk pesta atau acara spesial.
+    </p>
+
+    <div class="product-grid">
+
+      <div class="card">
+        <img src="assets/nails22.jpeg" alt="Chrome Mirror">
+        <h3>Chrome Mirror</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Silver, Gold, Rose Gold</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 48.000,-</p>
+        <button class="btn" onclick="bukaPopup('Chrome Mirror', ['Silver','Gold','Rose Gold'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/naisl23.jpeg" alt="Pearl Accent">
+        <h3>Pearl Accent</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Nude-Pearl, Pink-Pearl</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 45.000,-</p>
+        <button class="btn" onclick="bukaPopup('Pearl Accent', ['Nude-Pearl','Pink-Pearl'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/24.jpeg" alt="Rhinestone Accent">
+        <h3>Rhinestone Accent</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Nude-Crystal, Hitam-Silver</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 50.000,-</p>
+        <button class="btn" onclick="bukaPopup('Rhinestone Accent', ['Nude-Crystal','Hitam-Silver'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/25.jpeg" alt="Metallic Foil">
+        <h3>Metallic Foil</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Gold, Silver, Rose Gold</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 47.000,-</p>
+        <button class="btn" onclick="bukaPopup('Metallic Foil', ['Gold','Silver','Rose Gold'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/26.jpeg" alt="Luxury Gemstone">
+        <h3>Luxury Gemstone</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Ruby, Emerald, Diamond Style</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 65.000,-</p>
+        <button class="btn" onclick="bukaPopup('Luxury Gemstone', ['Ruby','Emerald','Diamond Style'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/27.jpeg" alt="Holographic">
+        <h3>Holographic</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Rainbow, Pink, Silver</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 50.000,-</p>
+        <button class="btn" onclick="bukaPopup('Holographic', ['Rainbow','Pink','Silver'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     SECTION 4 - Color Pop
+========================= -->
+<section class="section-katalog" id="s4">
+  <div class="container">
+    <br>
+    <h2 class="judul-section">Color Pop Collection</h2>
+    <hr style="max-width:300px; margin:12px auto; border:0; border-top:1px solid #ddd;">
+    <p class="subjudul-section">
+      Koleksi penuh warna cerah & desain unik untuk kamu yang suka tampil beda!
+    </p>
+
+    <div class="product-grid">
+
+      <div class="card">
+        <img src="assets/n28.jpeg" alt="Cat Eye Nail">
+        <h3>Cat Eye Nail</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Hijau, Ungu, Biru</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 38.000,-</p>
+        <button class="btn" onclick="bukaPopup('Cat Eye Nail', ['Hijau','Ungu','Biru'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/n29.jpeg" alt="Geometric Line">
+        <h3>Geometric Line</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Hitam-Putih, Gold-Nude, Silver-Hitam</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 42.000,-</p>
+        <button class="btn" onclick="bukaPopup('Geometric Line', ['Hitam-Putih','Gold-Nude','Silver-Hitam'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/n20.jpeg" alt="Neon Bright">
+        <h3>Neon Bright</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Orange, Hijau, Kuning Stabilo</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 41.000,-</p>
+        <button class="btn" onclick="bukaPopup('Neon Bright', ['Orange','Hijau','Kuning Stabilo'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/n31.jpeg" alt="Glow In The Dark">
+        <h3>Glow In The Dark</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Hijau Neon, Biru Neon, Pink Neon</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 48.000,-</p>
+        <button class="btn" onclick="bukaPopup('Glow In The Dark', ['Hijau Neon','Biru Neon','Pink Neon'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/n32.jpeg" alt="Matte Finish">
+        <h3>Matte Finish</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Hitam, Nude, Navy</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 38.000,-</p>
+        <button class="btn" onclick="bukaPopup('Matte Finish', ['Hitam','Nude','Navy'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/n33.jpeg" alt="Matte + Glossy Mix">
+        <h3>Matte + Glossy Mix</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Hitam Mix, Nude Mix</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 40.000,-</p>
+        <button class="btn" onclick="bukaPopup('Matte + Glossy Mix', ['Hitam Mix','Nude Mix'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     SECTION 5 - Artistic & Seasonal
+========================= -->
+<section class="section-katalog" id="s5">
+  <div class="container">
+    <br>
+    <h2 class="judul-section">Artistic & Seasonal Collection</h2>
+    <hr style="max-width:300px; margin:12px auto; border:0; border-top:1px solid #ddd;">
+    <p class="subjudul-section">
+      Koleksi spesial untuk momen tertentu dengan desain artistik unik.
+    </p>
+
+    <div class="product-grid">
+
+      <div class="card">
+        <img src="assets/n34.jpeg" alt="Glitter Accent">
+        <h3>Glitter Accent</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Nude-Gold, Pink-Silver</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 39.000,-</p>
+        <button class="btn" onclick="bukaPopup('Glitter Accent', ['Nude-Gold','Pink-Silver'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/n35.jpeg" alt="Dried Flower Nail">
+        <h3>Dried Flower Nail</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Lavender, Rose Kecil, Baby's Breath</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 53.000,-</p>
+        <button class="btn" onclick="bukaPopup('Dried Flower Nail', ['Lavender','Rose Kecil','Baby&#39;s Breath'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/n36.jpeg" alt="Seasonal Theme">
+        <h3>Seasonal Theme</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Natal, Halloween, Valentine</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 55.000,-</p>
+        <button class="btn" onclick="bukaPopup('Seasonal Theme', ['Natal','Halloween','Valentine'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/n37.jpeg" alt="Cartoon Character">
+        <h3>Cartoon Character</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Hello Kitty, Pooh, Doraemon</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 58.000,-</p>
+        <button class="btn" onclick="bukaPopup('Cartoon Character', ['Hello Kitty','Pooh','Doraemon'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/n38.jpeg" alt="Animal Print">
+        <h3>Animal Print</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Leopard, Zebra, Cow</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 46.000,-</p>
+        <button class="btn" onclick="bukaPopup('Animal Print', ['Leopard','Zebra','Cow'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/n39.jpeg" alt="Floral Handpaint">
+        <h3>Floral Handpaint</h3>
+        <p>Pilihan Warna: </p> 
+        <p>Daisy Putih, Rose Merah, Sakura Pink</p>
+        <p>Ukuran: XS, S</p>
+        <p>Harga: 52.000,-</p>
+        <button class="btn" onclick="bukaPopup('Floral Handpaint', ['Daisy Putih','Rose Merah','Sakura Pink'], ['XS','S'])">PESAN SEKARANG</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     POPUP PEMESANAN
+========================= -->
+<div id="popup" class="popup hidden">
+  <div class="popup-content">
+    <h3 id="popup-nama">Nama Produk</h3>
+    
+    <label for="popup-warna">Pilih Warna:</label>
+    <select id="popup-warna"></select>
+    
+    <label for="popup-ukuran">Pilih Ukuran:</label>
+    <select id="popup-ukuran"></select>
+    
+    <div class="popup-buttons">
+      <button class="btn" id="popup-submit">Pesan Sekarang</button>
+      <button class="btn-cancel" onclick="tutupPopup()">Batal</button>
+    </div>
+  </div>
+</div> <br><br>
+
+<!-- =========================
+     KONTAK SECTION
+========================= -->
+<section class="kontak-section">
+  <div class="container">
+    <h3>HUBUNGI KAMI</h3>
+    <p style="color: var(--muted); margin-bottom: 2rem;">
+      Ada pertanyaan atau mau pesan custom? Jangan ragu untuk menghubungi kami!
+    </p>
+    
+    <div class="kontak-buttons">
+      <a href="https://wa.me/6282261371838" class="kontak-btn whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        WhatsApp
+      </a>
+      <a href="https://instagram.com/prettynails" class="kontak-btn instagram" target="_blank">
+        <i class="fab fa-instagram"></i>
+        Instagram
+      </a>
+      <a href="https://tiktok.com/@prettynails" class="kontak-btn tiktok" target="_blank">
+        <i class="fab fa-tiktok"></i>
+        TikTok
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">© 2025 Pretty Nails — All rights reserved</div>
+</footer>
+
+<script>
+// Variabel untuk menyimpan produk yang sedang dipilih
+let currentProduct = "";
+
+// Fungsi untuk membuka popup
+function bukaPopup(nama, warnaList, ukuranList) {
+  currentProduct = nama;
+  
+  // Set nama produk di popup
+  document.getElementById("popup-nama").textContent = nama;
+  
+  // Isi dropdown warna
+  const warnaSelect = document.getElementById("popup-warna");
+  warnaSelect.innerHTML = "";
+  warnaList.forEach(warna => {
+    const option = document.createElement("option");
+    option.value = warna;
+    option.textContent = warna;
+    warnaSelect.appendChild(option);
+  });
+  
+  // Isi dropdown ukuran
+  const ukuranSelect = document.getElementById("popup-ukuran");
+  ukuranSelect.innerHTML = "";
+  ukuranList.forEach(ukuran => {
+    const option = document.createElement("option");
+    option.value = ukuran;
+    option.textContent = ukuran;
+    ukuranSelect.appendChild(option);
+  });
+  
+  // Tampilkan popup
+  document.getElementById("popup").classList.remove("hidden");
+}
+
+// Fungsi untuk menutup popup
+function tutupPopup() {
+  document.getElementById("popup").classList.add("hidden");
+}
+
+// Event listener untuk tombol submit di popup
+document.getElementById("popup-submit").addEventListener("click", function() {
+  const warna = document.getElementById("popup-warna").value;
+  const ukuran = document.getElementById("popup-ukuran").value;
+  
+  // Format pesan untuk WhatsApp
+  const pesan = 
+    `Halo! Saya mau pesan:%0A` +
+    `• Produk: ${encodeURIComponent(currentProduct)}%0A` +
+    `• Warna: ${encodeURIComponent(warna)}%0A` +
+    `• Ukuran: ${encodeURIComponent(ukuran)}`;
+  
+  // URL WhatsApp
+  const waURL = `https://wa.me/6282261371838?text=${pesan}`;
+  
+  // Buka WhatsApp
+  window.open(waURL, "_blank");
+  
+  // Tutup popup
+  tutupPopup();
+});
+
+// Tutup popup jika klik di luar area popup
+document.getElementById("popup").addEventListener("click", function(e) {
+  if (e.target === this) {
+    tutupPopup();
+  }
+});
+</script>
+</body>
+</html>
